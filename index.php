@@ -1,8 +1,10 @@
 <?php
 
 $task = [
-    'title'         =>  'Work through Screencast',
-    'due'           =>  'Today',
-    'assigned_to'   =>  'Me',
-    'completed'     =>  False,
+    'title'         =>  'Work through screencast',
+    'due'           =>  'today',
+    'assigned_to'   =>  'Caylin',
+    'completed'     =>  false,
 ];
+
+require 'index.view.php';
