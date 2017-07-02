@@ -1,13 +1,8 @@
 <?php
 
-$person = [
-    'age' => 27,
-    'hair' => 'brown',
-    'career' => 'web developer'
+$task = [
+    'title'         =>  'Work through Screencast',
+    'due'           =>  'Today',
+    'assigned_to'   =>  'Me',
+    'completed'     =>  False,
 ];
-
-$person['name'] = 'Caylin';
-
-unset($person['age']);
-
-require 'index.view.php';
