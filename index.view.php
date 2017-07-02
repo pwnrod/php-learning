@@ -8,27 +8,37 @@
     <h1>Task For The Day</h1>
 
     <ul>
-            <li>
-                <strong>Name: </strong> <?= $task['title']; ?>
-            </li>
+        <li>
+            <strong>Priority: </strong>
 
-            <li>
-                <strong>Due Date: </strong> <?= $task['due']; ?>
-            </li>
+            <?php if ($task['priority']) : ?>
+                <span class="icon">&#9888</span>
+            <?php else : ?>
+                <span>No hurry</span>
+            <?php endif; ?>
+        </li>
 
-            <li>
-                <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
-            </li>
+        <li>
+            <strong>Name: </strong> <?= $task['title']; ?>
+        </li>
 
-            <li>
-                <strong>Status: </strong>
+        <li>
+            <strong>Due Date: </strong> <?= $task['due']; ?>
+        </li>
 
-                <?php if ($task['completed']) : ?>
-                    <span class="icon">&#9989;</span>
-                <?php else : ?>
-                    <span class="icon">Incomplete</span>
-                <?php endif; ?>
-            </li>
+        <li>
+            <strong>Person Responsible: </strong> <?= $task['assigned_to']; ?>
+        </li>
+
+        <li>
+            <strong>Status: </strong>
+
+            <?php if ($task['completed']) : ?>
+                <span class="icon">&#9989;</span>
+            <?php else : ?>
+                <span class="icon">Incomplete</span>
+            <?php endif; ?>
+        </li>
     </ul>
 </body>
 </html>
