@@ -1,11 +1,9 @@
 <?php
 
-$task = [
-    'title'         =>  'Work through screencast',
-    'due'           =>  'today',
-    'assigned_to'   =>  'Caylin',
-    'completed'     =>  true,
-    'priority'      =>  true,
-];
+require 'functions.php';
+
+$animals = ['dog', 'cat'];
+
+dd($animals);
 
 require 'index.view.php';
