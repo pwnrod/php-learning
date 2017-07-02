@@ -13,8 +13,8 @@
 <body>
 <header>
     <ul>
-        <?php foreach ($names as $name) : ?>
-            <li><?= $name; ?></li>
+        <?php foreach ($animals as $animal) : ?>
+            <li><?= $animal; ?></li>
         <?php endforeach; ?>
     </ul>
 </header>
