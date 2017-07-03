@@ -1,25 +1,31 @@
 <?php
 
-require 'functions.php';
+class Task {
+    public $description;
+    public $completed = false;
 
-$animals = ['dog', 'cat'];
-$patrons = [
-    'Dave' => 21,
-    'Archer' => 19,
-    'Bertha' => 24,
-    'Derpo'  => 13,
-    'Harwin' => 33,
-];
+    public function __construct($description)
+    {
+        $this->description = $description;
+    }
 
-foreach ($patrons as $patron => $age) {
-    if (checkAge($age))
-        echo 'Come on in!';
-    else
-        echo 'Go home, squirt!';
+    public function complete()
+    {
+        $this->completed = true;
+    }
 
-    echo '<br />';
+    public function isComplete()
+    {
+        return $this->completed;
+    }
 }
 
-//dd($animals);
+$tasks = [
+    new Task('Go to the store'),
+    new Task('Finish my screencast'),
+    new Task('Clean my room')
+];
+
+$tasks[0]->complete();
 
 require 'index.view.php';
