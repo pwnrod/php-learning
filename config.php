@@ -1,5 +1,6 @@
 <?php
 
+// This file lets us keep sensitive information separated from our site
 return [
     'database' => [
         'name' => 'mytodo',
