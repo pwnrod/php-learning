@@ -1,16 +1,5 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/about">About Page</a></li>
-            <li><a href="/contact">Contact Page</a></li>
-        </ul>
-    </nav>
+<?php require('partials/head.php') ?>
+    <h1>My tasks</h1>
     <ul>
         <?php foreach ($tasks as $task) : ?>
             <li>
@@ -22,5 +11,4 @@
             </li>
         <?php endforeach; ?>
     </ul>
-</body>
-</html>
+<?php require('partials/footer.php') ?>
