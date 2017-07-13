@@ -21,4 +21,16 @@ class QueryBuilder
         // Lastly, fetch rows from the results
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+
+    public function insert($table, $parameters)
+    {
+        $sql = sprintf(
+            'insert into %s (%s) values (%s)',
+            $table, 'two', 'three'
+        );
+
+        die(var_dump($sql));
+
+        $statement->execute(['name' => 'Joe']);
+    }
 }
