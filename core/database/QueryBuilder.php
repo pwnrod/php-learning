@@ -26,11 +26,18 @@ class QueryBuilder
     {
         $sql = sprintf(
             'insert into %s (%s) values (%s)',
-            $table, 'two', 'three'
+            $table,
+            implode(', ', array_keys($parameters)),
+            ':' . implode(', :', array_keys($parameters))
         );
 
-        die(var_dump($sql));
+        try {
+            $statement = $this->pdo->prepare($sql);
 
-        $statement->execute(['name' => 'Joe']);
+            $statement->execute($parameters);
+
+        } catch (Exception $e) {
+            die('Whoops, something went wrong.');
+        }
     }
 }
