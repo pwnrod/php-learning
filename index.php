@@ -2,6 +2,7 @@
 // The entry way into the site. It pulls in the bootstrap file and uses the
 // Router class to direct traffic
 
+require 'vendor/autoload.php';
 require 'core/bootstrap.php';
 
 // Creates a new Router object containing 'routes.php'. Using this new instance
