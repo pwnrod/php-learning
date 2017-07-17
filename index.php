@@ -8,5 +8,5 @@ require 'core/bootstrap.php';
 // Creates a new Router object containing 'routes.php'. Using this new instance
 // it calls direct(), which expects a URI. We pass a neatly trimmed URI using
 // our Request static method
-require Router::load('routes.php')
+Router::load('routes.php')
     ->direct(Request::uri(), Request::method());
