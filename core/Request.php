@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Request
 {
     // Returns a neatly trimmed URI from the server global array.
